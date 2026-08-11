@@ -1,19 +1,5 @@
 import type { AttractionCollection } from '../types/attraction';
 
-/**
- * DEVELOPMENT DATA — NOT PRODUCTION DATA.
- *
- * Small, hand-picked dataset used to build and test the map-first UI
- * before the real backend endpoint exists. Coordinates are approximate
- * (sourced from general place knowledge, not surveyed) — good enough to
- * place each point in the right city/country for UI work, not authoritative
- * for GIS analysis. This file is expected to be deleted once
- * `GET /api/v1/attractions` (or similar) exists on the backend — see
- * features/map/useAttractions.ts for the seam where that swap happens.
- *
- * Shape matches AttractionCollection exactly, so swapping this constant
- * for a fetched response later should not require touching any consumer.
- */
 export const LOCAL_ATTRACTIONS: AttractionCollection = {
   type: 'FeatureCollection',
   features: [
@@ -52,7 +38,7 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'BR',
         city: 'Foz do Iguaçu',
         category: 'culture',
-        description: 'Maior templo budista da América Latina, aberto à visitação.',
+        description: 'Templo budista aberto à visitação em Foz do Iguaçu.',
       },
     },
     {
@@ -64,7 +50,8 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'BR',
         city: 'Foz do Iguaçu',
         category: 'landmark',
-        description: 'Usina hidrelétrica binacional Brasil-Paraguai; visitas guiadas à estrutura.',
+        description:
+          'Usina hidrelétrica binacional Brasil-Paraguai com opções de visitação.',
       },
     },
     {
@@ -76,7 +63,8 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'PY',
         city: 'Ciudad del Este',
         category: 'landmark',
-        description: 'Ponte sobre o rio Paraná que liga Ciudad del Este a Foz do Iguaçu.',
+        description:
+          'Ponte sobre o rio Paraná que liga Ciudad del Este a Foz do Iguaçu.',
       },
     },
     {
@@ -88,7 +76,8 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'PY',
         city: 'Ciudad del Este',
         category: 'shopping',
-        description: 'Região comercial concentrada, conhecida pelo comércio de eletrônicos e importados.',
+        description:
+          'Região comercial concentrada, conhecida pelo comércio de eletrônicos e importados.',
       },
     },
     {
@@ -100,7 +89,8 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'PY',
         city: 'Ciudad del Este',
         category: 'nature',
-        description: 'Quedas d\u2019água menos conhecidas que as do Iguaçu, num afluente do Paraná.',
+        description:
+          'Conjunto de quedas d’água localizado na região de Presidente Franco.',
       },
     },
     {
@@ -112,7 +102,8 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'AR',
         city: 'Puerto Iguazú',
         category: 'nature',
-        description: 'Circuitos Superior e Inferior, incluindo a Garganta do Diabo.',
+        description:
+          'Circuitos de visitação do Parque Nacional Iguazú, incluindo a Garganta do Diabo.',
       },
     },
     {
@@ -124,7 +115,8 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'AR',
         city: 'Puerto Iguazú',
         category: 'landmark',
-        description: 'Mirante argentino da tríplice fronteira, de frente para o marco brasileiro.',
+        description:
+          'Ponto turístico argentino com vista para a região da tríplice fronteira.',
       },
     },
     {
@@ -136,11 +128,11 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'AR',
         city: 'Puerto Iguazú',
         category: 'gastronomy',
-        description: 'Orla com restaurantes e vista para o encontro dos rios Iguaçu e Paraná.',
+        description:
+          'Orla de Puerto Iguazú próxima ao encontro dos rios Iguaçu e Paraná.',
       },
     },
   ],
 };
 
-/** Approximate geographic centre of the trinational region, for the map's initial view. */
 export const REGION_CENTER: [number, number] = [-54.585, -25.58];
