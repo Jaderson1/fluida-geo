@@ -1,0 +1,56 @@
+.panel {
+  height: 100%;
+  padding: 24px 20px;
+  overflow-y: auto;
+  background: var(--ink-900);
+  border-left: 1px solid var(--line);
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--paper);
+  margin-bottom: 12px;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.meta {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.description {
+  margin: 0 0 20px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--paper);
+}
+
+.coords {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--tide);
+  letter-spacing: 0.02em;
+}

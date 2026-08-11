@@ -1,0 +1,82 @@
+/*
+  Design tokens — dark / cartographic direction, per the approved concept.
+  Named after the "chart" metaphor: ink (surfaces), paper (text), brass
+  (primary accent, like a survey instrument), tide (secondary accent, water).
+*/
+:root {
+  --ink-950: #0a1220;
+  --ink-900: #101a2c;
+  --ink-800: #1a2740;
+  --ink-700: #263a5c;
+  --line: #2c3b57;
+
+  --paper: #e9eef6;
+  --muted: #8695ac;
+
+  --brass: #d4a24c;
+  --brass-dim: #9c7838;
+  --tide: #56acb8;
+
+  --country-br: #4c9a6a;
+  --country-py: #b5564a;
+  --country-ar: #5fa0c9;
+
+  --font-display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  color-scheme: dark;
+}
+
+/* Fluida's own recommendation (see @fluida/react README "CSS notes"). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink-950);
+  color: var(--paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Visible focus is a floor, not a nice-to-have. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--tide);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

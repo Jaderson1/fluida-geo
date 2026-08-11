@@ -1,0 +1,56 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/*
+ * Desktop-first, per the brief's stated priority. The map gets ~72% of
+ * the main area, the details panel the rest — see the implementation
+ * report for why this ratio is plain CSS rather than a Fluida prop
+ * (FluidaStack has no weight/ratio option; see its README/types).
+ */
+.main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 72fr) minmax(280px, 28fr);
+}
+
+.mainStacked {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(320px, 55vh) auto;
+}
+
+/* CSS-only floor so a real mobile viewport never flashes the desktop
+   grid before Fluida's viewport hook has a chance to run. */
+@media (max-width: 767px) {
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(320px, 55vh) auto;
+  }
+}
