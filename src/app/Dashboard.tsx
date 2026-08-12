@@ -10,15 +10,6 @@ import MetricsStrip from '../features/metrics/MetricsStrip';
 import { computeStats } from '../features/metrics/computeStats';
 import styles from './Dashboard.module.css';
 
-/**
- * Owns the two pieces of state that are genuinely cross-cutting —
- * filters and the current selection — and nothing else. MapView only
- * knows "here is data, tell me what got clicked"; DetailsPanel only
- * knows "here is a feature or null, render it". Neither talks to the
- * other directly, matching the brief:
- *
- *   Map -> selection event -> Dashboard state -> DetailsPanel
- */
 function Dashboard() {
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTER_STATE);
   const [selectedId, setSelectedId] = useState<SelectedAttractionId>(null);
@@ -42,10 +33,8 @@ function Dashboard() {
     [filteredFeatures, selectedId],
   );
 
-  // A filter change can remove the selected point from view. Clearing the
-  // selection here (rather than in the filter handler) keeps this the one
-  // place responsible for selection validity, regardless of what caused
-  // the feature list to change.
+  // Cleared here, not in the filter handler, so any change to
+  // filteredFeatures keeps selection valid regardless of its cause.
   useEffect(() => {
     if (selectedId !== null && !filteredFeatures.some((feature) => feature.properties.id === selectedId)) {
       setSelectedId(null);
@@ -54,12 +43,8 @@ function Dashboard() {
 
   const stats = useMemo(() => computeStats(filteredFeatures), [filteredFeatures]);
 
-  // Single source of truth for "are we in mobile layout" across the whole
-  // page — reusing Fluida's own breakpoint rather than a second, possibly
-  // different, hand-picked media query value. FluidaStack elsewhere in
-  // the tree reads this same breakpoint internally, so the page collapses
-  // as one coordinated layout, not two layouts that happen to usually
-  // agree.
+  // Reuses Fluida's own breakpoint (also used inside FluidaStack elsewhere)
+  // instead of a second, possibly different, hand-picked media query.
   const { breakpoint } = useFluidaLayout();
   const isMobile = breakpoint === 'mobile';
 

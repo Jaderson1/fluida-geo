@@ -1,15 +1,27 @@
-import { useEffect, useRef, type RefObject } from 'react';
+import { useEffect, useRef, useState, type RefObject } from 'react';
 import {
   Map as MapLibreMap,
   NavigationControl,
   GeoJSONSource,
+  setWorkerUrl,
   type MapLayerMouseEvent,
   type MapMouseEvent,
 } from 'maplibre-gl';
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import type { AttractionCollection } from '../../types/attraction';
 import type { SelectedAttractionId } from '../../types/filters';
-import { ATTRACTIONS_LAYER_ID, ATTRACTIONS_SOURCE_ID, BASEMAP_STYLE_URL } from './mapConstants';
+import {
+  ATTRACTIONS_LAYER_ID,
+  ATTRACTIONS_SOURCE_ID,
+  SATELLITE_STYLE,
+  STREETS_STYLE_URL,
+  type BasemapId,
+} from './mapConstants';
+
+// Without this, Vite serves maplibre-gl's worker at the wrong URL and tiles
+// never get processed — the map style loads but nothing renders on top.
+setWorkerUrl(workerUrl);
 
 function selectionExpression<T extends number | string>(
   selectedId: SelectedAttractionId,
@@ -17,6 +29,28 @@ function selectionExpression<T extends number | string>(
   otherwise: T,
 ): ['case', ['==', ['get', 'id'], string], T, T] {
   return ['case', ['==', ['get', 'id'], selectedId ?? ''], whenSelected, otherwise];
+}
+
+function ensureAttractionsLayer(
+  map: MapLibreMap,
+  data: AttractionCollection,
+  selectedId: SelectedAttractionId,
+) {
+  if (map.getSource(ATTRACTIONS_SOURCE_ID)) {
+    return;
+  }
+  map.addSource(ATTRACTIONS_SOURCE_ID, { type: 'geojson', data });
+  map.addLayer({
+    id: ATTRACTIONS_LAYER_ID,
+    type: 'circle',
+    source: ATTRACTIONS_SOURCE_ID,
+    paint: {
+      'circle-radius': selectionExpression(selectedId, 9, 6),
+      'circle-color': selectionExpression(selectedId, '#56acb8', '#d4a24c'),
+      'circle-stroke-width': 2,
+      'circle-stroke-color': '#0a1220',
+    },
+  });
 }
 
 interface UseMapLibreOptions {
@@ -37,12 +71,25 @@ export function useMapLibre({
   onSelect,
 }: UseMapLibreOptions) {
   const mapRef = useRef<MapLibreMap | null>(null);
+  const [basemap, setBasemapState] = useState<BasemapId>('streets');
 
   // Keeps the latest callback without recreating the MapLibre instance.
   const onSelectRef = useRef(onSelect);
   useEffect(() => {
     onSelectRef.current = onSelect;
   }, [onSelect]);
+
+  // Same reasoning as onSelectRef: read by the style.load handler below,
+  // which is registered once and would otherwise see stale values after a
+  // basemap switch.
+  const dataRef = useRef(data);
+  useEffect(() => {
+    dataRef.current = data;
+  }, [data]);
+  const selectedIdRef = useRef(selectedId);
+  useEffect(() => {
+    selectedIdRef.current = selectedId;
+  }, [selectedId]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -52,44 +99,35 @@ export function useMapLibre({
 
     const map = new MapLibreMap({
       container,
-      style: BASEMAP_STYLE_URL,
+      style: STREETS_STYLE_URL,
       center: initialCenter,
       zoom: initialZoom,
     });
     map.addControl(new NavigationControl({ showCompass: false }), 'top-right');
 
-    map.on('load', () => {
-      map.addSource(ATTRACTIONS_SOURCE_ID, { type: 'geojson', data });
+    // setStyle() (basemap switch) drops custom sources/layers; style.load
+    // fires after the initial load and after every setStyle, so this one
+    // handler covers both cases.
+    map.on('style.load', () => {
+      ensureAttractionsLayer(map, dataRef.current, selectedIdRef.current);
+    });
 
-      map.addLayer({
-        id: ATTRACTIONS_LAYER_ID,
-        type: 'circle',
-        source: ATTRACTIONS_SOURCE_ID,
-        paint: {
-          'circle-radius': selectionExpression(selectedId, 9, 6),
-          'circle-color': selectionExpression(selectedId, '#56acb8', '#d4a24c'),
-          'circle-stroke-width': 2,
-          'circle-stroke-color': '#0a1220',
-        },
-      });
-
-      map.on('click', ATTRACTIONS_LAYER_ID, (event: MapLayerMouseEvent) => {
-        const feature = event.features?.[0];
-        const id = feature?.properties?.id;
-        onSelectRef.current(typeof id === 'string' ? id : null);
-      });
-      map.on('click', (event: MapMouseEvent) => {
-        const hits = map.queryRenderedFeatures(event.point, { layers: [ATTRACTIONS_LAYER_ID] });
-        if (hits.length === 0) {
-          onSelectRef.current(null);
-        }
-      });
-      map.on('mouseenter', ATTRACTIONS_LAYER_ID, () => {
-        map.getCanvas().style.cursor = 'pointer';
-      });
-      map.on('mouseleave', ATTRACTIONS_LAYER_ID, () => {
-        map.getCanvas().style.cursor = '';
-      });
+    map.on('click', ATTRACTIONS_LAYER_ID, (event: MapLayerMouseEvent) => {
+      const feature = event.features?.[0];
+      const id = feature?.properties?.id;
+      onSelectRef.current(typeof id === 'string' ? id : null);
+    });
+    map.on('click', (event: MapMouseEvent) => {
+      const hits = map.queryRenderedFeatures(event.point, { layers: [ATTRACTIONS_LAYER_ID] });
+      if (hits.length === 0) {
+        onSelectRef.current(null);
+      }
+    });
+    map.on('mouseenter', ATTRACTIONS_LAYER_ID, () => {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+    map.on('mouseleave', ATTRACTIONS_LAYER_ID, () => {
+      map.getCanvas().style.cursor = '';
     });
 
     mapRef.current = map;
@@ -127,5 +165,14 @@ export function useMapLibre({
     );
   }, [selectedId]);
 
-  return mapRef;
+  const setBasemap = (next: BasemapId) => {
+    const map = mapRef.current;
+    if (!map || next === basemap) {
+      return;
+    }
+    setBasemapState(next);
+    map.setStyle(next === 'streets' ? STREETS_STYLE_URL : SATELLITE_STYLE);
+  };
+
+  return { mapRef, basemap, setBasemap };
 }
