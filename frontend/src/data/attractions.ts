@@ -1,5 +1,7 @@
 import type { AttractionCollection } from '../types/attraction';
 
+// Approximate/dev coordinates. Cataratas points are placeholders pending a
+// decision on whether they should mark the entrance, viewpoint, or falls area.
 export const LOCAL_ATTRACTIONS: AttractionCollection = {
   type: 'FeatureCollection',
   features: [
@@ -18,7 +20,7 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
     },
     {
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [-54.5947, -25.5936] },
+      geometry: { type: 'Point', coordinates: [-54.590921, -25.588278] },
       properties: {
         id: 'br-marco-tres-fronteiras',
         name: 'Marco das Três Fronteiras',
@@ -31,27 +33,26 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
     },
     {
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [-54.534, -25.47] },
+      geometry: { type: 'Point', coordinates: [-54.600031, -25.473832] },
       properties: {
         id: 'br-templo-chen-tien',
         name: 'Templo Budista Chen Tien',
         country: 'BR',
         city: 'Foz do Iguaçu',
         category: 'culture',
-        description: 'Templo budista aberto à visitação em Foz do Iguaçu.',
+        description: 'Maior templo budista da América Latina, aberto à visitação.',
       },
     },
     {
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [-54.5892, -25.4083] },
+      geometry: { type: 'Point', coordinates: [-54.585165, -25.447023] },
       properties: {
         id: 'br-itaipu',
-        name: 'Itaipu Binacional (centro de visitantes)',
+        name: 'Itaipu Binacional — Centro de Recepção de Visitantes',
         country: 'BR',
         city: 'Foz do Iguaçu',
         category: 'landmark',
-        description:
-          'Usina hidrelétrica binacional Brasil-Paraguai com opções de visitação.',
+        description: 'Usina hidrelétrica binacional Brasil-Paraguai; visitas guiadas à estrutura.',
       },
     },
     {
@@ -63,34 +64,31 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'PY',
         city: 'Ciudad del Este',
         category: 'landmark',
-        description:
-          'Ponte sobre o rio Paraná que liga Ciudad del Este a Foz do Iguaçu.',
+        description: 'Ponte sobre o rio Paraná que liga Ciudad del Este a Foz do Iguaçu.',
       },
     },
     {
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [-54.6114, -25.5163] },
+      geometry: { type: 'Point', coordinates: [-54.6087, -25.5119] },
       properties: {
         id: 'py-microcentro',
         name: 'Microcentro de Ciudad del Este',
         country: 'PY',
         city: 'Ciudad del Este',
         category: 'shopping',
-        description:
-          'Região comercial concentrada, conhecida pelo comércio de eletrônicos e importados.',
+        description: 'Região comercial concentrada, conhecida pelo comércio de eletrônicos e importados.',
       },
     },
     {
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [-54.5828, -25.5606] },
+      geometry: { type: 'Point', coordinates: [-54.633361, -25.561278] },
       properties: {
         id: 'py-saltos-monday',
         name: 'Saltos del Monday',
         country: 'PY',
-        city: 'Ciudad del Este',
+        city: 'Presidente Franco',
         category: 'nature',
-        description:
-          'Conjunto de quedas d’água localizado na região de Presidente Franco.',
+        description: 'Quedas d\u2019água menos conhecidas que as do Iguaçu, num afluente do Paraná.',
       },
     },
     {
@@ -102,34 +100,31 @@ export const LOCAL_ATTRACTIONS: AttractionCollection = {
         country: 'AR',
         city: 'Puerto Iguazú',
         category: 'nature',
-        description:
-          'Circuitos de visitação do Parque Nacional Iguazú, incluindo a Garganta do Diabo.',
+        description: 'Circuitos Superior e Inferior, incluindo a Garganta do Diabo.',
       },
     },
     {
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [-54.5814, -25.5978] },
+      geometry: { type: 'Point', coordinates: [-54.59077, -25.59476] },
       properties: {
         id: 'ar-hito-tres-fronteras',
         name: 'Hito Argentino Tres Fronteras',
         country: 'AR',
         city: 'Puerto Iguazú',
         category: 'landmark',
-        description:
-          'Ponto turístico argentino com vista para a região da tríplice fronteira.',
+        description: 'Mirante argentino da tríplice fronteira, de frente para o marco brasileiro.',
       },
     },
     {
       type: 'Feature',
-      geometry: { type: 'Point', coordinates: [-54.576, -25.5985] },
+      geometry: { type: 'Point', coordinates: [-54.5866, -25.5945] },
       properties: {
         id: 'ar-costanera',
         name: 'Costanera de Puerto Iguazú',
         country: 'AR',
         city: 'Puerto Iguazú',
         category: 'gastronomy',
-        description:
-          'Orla de Puerto Iguazú próxima ao encontro dos rios Iguaçu e Paraná.',
+        description: 'Orla com restaurantes e vista para o encontro dos rios Iguaçu e Paraná.',
       },
     },
   ],

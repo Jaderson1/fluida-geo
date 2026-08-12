@@ -6,12 +6,6 @@ interface DetailsPanelProps {
   attraction: AttractionFeature | null;
 }
 
-/**
- * Purely presentational: receives the already-selected feature as a prop.
- * Does not know about MapLibre, does not know how selection happened —
- * that lives in the Dashboard, per the brief ("Map -> selection event ->
- * Dashboard state -> DetailsPanel").
- */
 function DetailsPanel({ attraction }: DetailsPanelProps) {
   if (!attraction) {
     return (
