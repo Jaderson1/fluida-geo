@@ -5,6 +5,7 @@ import type { SelectedAttractionId } from '../../types/filters';
 import { useMapLibre } from './useMapLibre';
 import { INITIAL_ZOOM } from './mapConstants';
 import { REGION_CENTER } from '../../data/attractions';
+import BasemapToggle from './BasemapToggle';
 import styles from './MapView.module.css';
 
 interface MapViewProps {
@@ -15,7 +16,7 @@ interface MapViewProps {
 
 function MapView({ data, selectedId, onSelect }: MapViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useMapLibre({
+  const { mapRef, basemap, setBasemap } = useMapLibre({
     containerRef,
     initialCenter: REGION_CENTER,
     initialZoom: INITIAL_ZOOM,
@@ -34,7 +35,11 @@ function MapView({ data, selectedId, onSelect }: MapViewProps) {
     mapRef.current?.resize();
   }, [width, height, mapRef]);
 
-  return <div ref={containerRef} className={styles.mapContainer} aria-label="Mapa da região trinacional" />;
+  return (
+    <div ref={containerRef} className={styles.mapContainer} aria-label="Mapa da região trinacional">
+      <BasemapToggle value={basemap} onChange={setBasemap} />
+    </div>
+  );
 }
 
 export default MapView;
