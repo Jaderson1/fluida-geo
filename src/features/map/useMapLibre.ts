@@ -18,6 +18,41 @@ import {
   STREETS_STYLE_URL,
   type BasemapId,
 } from './mapConstants';
+import { CATEGORY_COLOR } from '../filters/categoryLabels';
+
+// One color per category, layered under the selection highlight below.
+// Written as a literal tuple (not built from Object.entries) so it matches
+// MapLibre's strict expression typing instead of a loosely-typed array.
+function colorExpression(selectedId: SelectedAttractionId) {
+  // MapLibre's paint-property type is a deep union of hand-written tuples
+  // that doesn't practically narrow for a dynamically-sized 6-branch match
+  // expression built from CATEGORY_COLOR. The bridge-through-unknown cast
+  // below is a known, deliberate gap in the type, not a hidden one — the
+  // runtime shape is a standard "case"/"match" expression MapLibre accepts.
+  const expression = [
+    'case',
+    ['==', ['get', 'id'], selectedId ?? ''],
+    '#56acb8',
+    [
+      'match',
+      ['get', 'category'],
+      'nature',
+      CATEGORY_COLOR.nature,
+      'culture',
+      CATEGORY_COLOR.culture,
+      'gastronomy',
+      CATEGORY_COLOR.gastronomy,
+      'shopping',
+      CATEGORY_COLOR.shopping,
+      'landmark',
+      CATEGORY_COLOR.landmark,
+      'hotel',
+      CATEGORY_COLOR.hotel,
+      CATEGORY_COLOR.landmark,
+    ],
+  ];
+  return expression as unknown as ReturnType<typeof selectionExpression<string>>;
+}
 
 // Without this, Vite serves maplibre-gl's worker at the wrong URL and tiles
 // never get processed — the map style loads but nothing renders on top.
@@ -46,7 +81,7 @@ function ensureAttractionsLayer(
     source: ATTRACTIONS_SOURCE_ID,
     paint: {
       'circle-radius': selectionExpression(selectedId, 9, 6),
-      'circle-color': selectionExpression(selectedId, '#56acb8', '#d4a24c'),
+      'circle-color': colorExpression(selectedId),
       'circle-stroke-width': 2,
       'circle-stroke-color': '#0a1220',
     },
@@ -158,11 +193,7 @@ export function useMapLibre({
       return;
     }
     map.setPaintProperty(ATTRACTIONS_LAYER_ID, 'circle-radius', selectionExpression(selectedId, 9, 6));
-    map.setPaintProperty(
-      ATTRACTIONS_LAYER_ID,
-      'circle-color',
-      selectionExpression(selectedId, '#56acb8', '#d4a24c'),
-    );
+    map.setPaintProperty(ATTRACTIONS_LAYER_ID, 'circle-color', colorExpression(selectedId));
   }, [selectedId]);
 
   const setBasemap = (next: BasemapId) => {

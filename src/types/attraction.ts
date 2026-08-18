@@ -1,12 +1,6 @@
-/**
- * Domain types for tourist attractions.
- *
- * AttractionProperties is written to already match the shape the future
- * FastAPI backend should return inside each GeoJSON Feature's `properties`
- * (see docs on the backend's planned PostGIS -> GeoJSON contract). Local
- * dev data and a future API response should both satisfy this type without
- * changes here.
- */
+// AttractionProperties matches the shape the future backend should return
+// inside each GeoJSON Feature's properties, so local data and a real API
+// response both satisfy this type unchanged.
 
 export type CountryCode = 'BR' | 'PY' | 'AR';
 
@@ -15,7 +9,8 @@ export type AttractionCategory =
   | 'culture'
   | 'gastronomy'
   | 'shopping'
-  | 'landmark';
+  | 'landmark'
+  | 'hotel';
 
 export interface AttractionProperties {
   id: string;

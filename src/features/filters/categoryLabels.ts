@@ -6,6 +6,7 @@ export const CATEGORY_LABELS: Record<AttractionCategory, string> = {
   gastronomy: 'Gastronomia',
   shopping: 'Compras',
   landmark: 'Marcos',
+  hotel: 'Hotéis',
 };
 
 export const CATEGORY_ORDER: AttractionCategory[] = [
@@ -14,7 +15,17 @@ export const CATEGORY_ORDER: AttractionCategory[] = [
   'gastronomy',
   'shopping',
   'landmark',
+  'hotel',
 ];
+
+export const CATEGORY_COLOR: Record<AttractionCategory, string> = {
+  nature: '#4c9a6a',
+  culture: '#b08cd9',
+  gastronomy: '#e0935a',
+  shopping: '#5fa0c9',
+  landmark: '#d4a24c',
+  hotel: '#c9738a',
+};
 
 export const COUNTRY_LABELS: Record<CountryCode, string> = {
   BR: 'BR',
