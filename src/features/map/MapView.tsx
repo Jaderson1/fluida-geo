@@ -1,17 +1,17 @@
 import { useEffect, useRef } from 'react';
 import { useFluidaContainerSize } from '@fluida/react';
-import type { AttractionCollection } from '../../types/attraction';
-import type { SelectedAttractionId } from '../../types/filters';
+import type { PlaceCollection } from '../../types/place';
+import type { SelectedPlaceId } from '../../types/filters';
 import { useMapLibre } from './useMapLibre';
 import { INITIAL_ZOOM } from './mapConstants';
-import { REGION_CENTER } from '../../data/attractions';
+import { REGION_CENTER } from '../../data/places';
 import BasemapToggle from './BasemapToggle';
 import styles from './MapView.module.css';
 
 interface MapViewProps {
-  data: AttractionCollection;
-  selectedId: SelectedAttractionId;
-  onSelect: (id: SelectedAttractionId) => void;
+  data: PlaceCollection;
+  selectedId: SelectedPlaceId;
+  onSelect: (id: SelectedPlaceId) => void;
 }
 
 function MapView({ data, selectedId, onSelect }: MapViewProps) {

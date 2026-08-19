@@ -22,7 +22,12 @@ export const SATELLITE_STYLE: StyleSpecification = {
   layers: [{ id: 'satellite', type: 'raster', source: 'satellite' }],
 };
 
-export const ATTRACTIONS_SOURCE_ID = 'attractions';
-export const ATTRACTIONS_LAYER_ID = 'attractions-points';
+export const PLACES_SOURCE_ID = 'places';
+export const PLACES_LAYER_ID = 'places-points';
+export const CLUSTER_LAYER_ID = 'places-clusters';
+export const CLUSTER_COUNT_LAYER_ID = 'places-cluster-count';
+
+export const CLUSTER_RADIUS = 50;
+export const CLUSTER_MAX_ZOOM = 14;
 
 export const INITIAL_ZOOM = 12;
