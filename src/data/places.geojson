@@ -1,0 +1,1427 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.4367,
+          -25.6953
+        ]
+      },
+      "properties": {
+        "id": "br-cataratas",
+        "name": "Cataratas do Iguaçu (lado brasileiro)",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "nature",
+        "description": "Trilha e mirantes do Parque Nacional do Iguaçu com vista panorâmica das quedas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.590921,
+          -25.588278
+        ]
+      },
+      "properties": {
+        "id": "br-marco-tres-fronteiras",
+        "name": "Marco das Três Fronteiras",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "landmark",
+        "description": "Obelisco à beira do rio com vista para os pontos equivalentes na Argentina e no Paraguai."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.600031,
+          -25.473832
+        ]
+      },
+      "properties": {
+        "id": "br-templo-chen-tien",
+        "name": "Templo Budista Chen Tien",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "culture",
+        "description": "Templo budista e atração cultural de Foz do Iguaçu, conhecido por suas estátuas e pela vista elevada da região."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.585165,
+          -25.447023
+        ]
+      },
+      "properties": {
+        "id": "br-itaipu",
+        "name": "Itaipu Binacional — Centro de Recepção de Visitantes",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "landmark",
+        "description": "Usina hidrelétrica binacional Brasil-Paraguai; visitas guiadas à estrutura."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.6076,
+          -25.5169
+        ]
+      },
+      "properties": {
+        "id": "py-ponte-amizade",
+        "name": "Ponte da Amizade (lado paraguaio)",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "landmark",
+        "description": "Ponte sobre o rio Paraná que liga Ciudad del Este a Foz do Iguaçu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.6087,
+          -25.5119
+        ]
+      },
+      "properties": {
+        "id": "py-microcentro",
+        "name": "Microcentro de Ciudad del Este",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Região comercial concentrada, conhecida pelo comércio de eletrônicos e importados."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.633361,
+          -25.561278
+        ]
+      },
+      "properties": {
+        "id": "py-saltos-monday",
+        "name": "Saltos del Monday",
+        "country": "PY",
+        "city": "Presidente Franco",
+        "category": "nature",
+        "description": "Quedas d’água menos conhecidas que as do Iguaçu, num afluente do Paraná."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.452,
+          -25.672
+        ]
+      },
+      "properties": {
+        "id": "ar-cataratas",
+        "name": "Cataratas del Iguazú (lado argentino)",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "nature",
+        "description": "Circuitos Superior e Inferior, incluindo a Garganta do Diabo."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.59077,
+          -25.59476
+        ]
+      },
+      "properties": {
+        "id": "ar-hito-tres-fronteras",
+        "name": "Hito Argentino Tres Fronteras",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "landmark",
+        "description": "Mirante argentino da tríplice fronteira, de frente para o marco brasileiro."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.5866,
+          -25.5945
+        ]
+      },
+      "properties": {
+        "id": "ar-costanera",
+        "name": "Costanera de Puerto Iguazú",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "gastronomy",
+        "description": "Orla com restaurantes e vista para o encontro dos rios Iguaçu e Paraná."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.482424,
+          -25.613754
+        ]
+      },
+      "properties": {
+        "id": "br-parque-das-aves",
+        "name": "Parque das Aves",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "nature",
+        "description": "Viveiros de imersão com aves da Mata Atlântica, ao lado da entrada do Parque Nacional do Iguaçu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.517131,
+          -25.591591
+        ]
+      },
+      "properties": {
+        "id": "br-dreams-park-show",
+        "name": "Dreams Park Show (Museu de Cera e Vale dos Dinossauros)",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "culture",
+        "description": "Complexo com museu de cera, réplicas de dinossauros animatrônicos e exposição de miniaturas de monumentos."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.4858,
+          -25.609
+        ]
+      },
+      "properties": {
+        "id": "br-wonder-park-foz",
+        "name": "Wonder Park Foz",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "entertainment",
+        "description": "Complexo temático com Movie Cars, Big Land, Lumina Park e Show das Águas, no corredor turístico das Cataratas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.57864,
+          -25.52069
+        ]
+      },
+      "properties": {
+        "id": "br-mesquita-omar-al-khattab",
+        "name": "Mesquita Omar Ibn Al-Khattab",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "culture",
+        "description": "Mesquita da comunidade islâmica de Foz do Iguaçu, inaugurada em 1983 e aberta a visitas guiadas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.584156,
+          -25.505527
+        ]
+      },
+      "properties": {
+        "id": "br-refugio-bela-vista",
+        "name": "Refúgio Biológico Bela Vista",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "nature",
+        "description": "Área de proteção da Itaipu Binacional com trilha guiada por fauna e flora nativas da região."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.55814,
+          -25.61876
+        ]
+      },
+      "properties": {
+        "id": "ar-la-aripuca",
+        "name": "La Aripuca",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "culture",
+        "description": "Construção de grande porte em madeira nativa recuperada, com foco educativo sobre a selva misionera."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.548367,
+          -25.626008
+        ]
+      },
+      "properties": {
+        "id": "ar-guira-oga",
+        "name": "Güira Oga",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "nature",
+        "description": "Refúgio de resgate e reabilitação de aves e outros animais silvestres da selva misionera."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.56381,
+          -25.59951
+        ]
+      },
+      "properties": {
+        "id": "ar-duty-free-shop",
+        "name": "Duty Free Shop Puerto Iguazú",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "shopping",
+        "description": "Loja livre de impostos próxima à fronteira, com lojas temáticas de marcas internacionais."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.563812,
+          -25.556413
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-rafain",
+        "name": "Rafain Churrascaria Show",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Churrascaria tradicional com buffet completo e show folclórico latino-americano."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.57536,
+          -25.516252
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-baru",
+        "name": "Baru Gastronomia",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Restaurante, café e bar na Avenida Paraná, com serviço de café da manhã, almoço, jantar e happy hour."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.5810699,
+          -25.5466805
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-confins",
+        "name": "Confins Steakhouse",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Referência em carnes no centro de Foz do Iguaçu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.579993,
+          -25.518156
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-castelo-libanes",
+        "name": "Castelo Libanês",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Cozinha árabe tradicional, com homus, quibes e cordeiro, próximo ao centro."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.435,
+          -25.69
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-porto-canoas",
+        "name": "Porto Canoas",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Restaurante dentro do Parque Nacional do Iguaçu, com vista para as quedas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.572,
+          -25.598
+        ]
+      },
+      "properties": {
+        "id": "ar-restaurant-la-rueda",
+        "name": "La Rueda 1975",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "gastronomy",
+        "description": "Um dos restaurantes mais tradicionais de Puerto Iguazú, com clássicos da culinária argentina."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.57,
+          -25.601
+        ]
+      },
+      "properties": {
+        "id": "ar-restaurant-quincho",
+        "name": "El Quincho del Tío Querido",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "gastronomy",
+        "description": "Parrilla com mais de 30 anos de tradição e show noturno de folclore e tango."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.574,
+          -25.599
+        ]
+      },
+      "properties": {
+        "id": "ar-restaurant-aqva",
+        "name": "Aqva Restaurante Iguazú",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "gastronomy",
+        "description": "Pratos regionais com peixes dos rios Paraná e Iguaçu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.60752,
+          -25.50861
+        ]
+      },
+      "properties": {
+        "id": "py-restaurant-sax-palace",
+        "name": "Sax Palace",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "gastronomy",
+        "description": "Restaurante nos andares superiores do edifício Sax, com cozinha internacional e adega própria."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.605,
+          -25.512
+        ]
+      },
+      "properties": {
+        "id": "py-restaurant-patussi",
+        "name": "Churrasqueria Patussi Grill",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "gastronomy",
+        "description": "Churrascaria ao estilo brasileiro bem avaliada na região."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.615,
+          -25.5
+        ]
+      },
+      "properties": {
+        "id": "py-restaurant-belsit",
+        "name": "Belsit di Giorgio",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "gastronomy",
+        "description": "Restaurante italiano próximo ao Lago da República."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.43842,
+          -25.68412
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-cataratas-belmond",
+        "name": "Hotel das Cataratas, A Belmond Hotel",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Único hotel dentro do Parque Nacional do Iguaçu, em casarão de estilo colonial português."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.561944,
+          -25.559722
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-bourbon-thermas",
+        "name": "Bourbon Cataratas do Iguaçu Thermas Eco Resort",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Eco resort com piscinas termais alimentadas pelo Aquífero Guarani."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.52,
+          -25.580517
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-wish",
+        "name": "Wish Foz do Iguaçu Resort",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Resort com campo de golfe de 18 buracos e inspiração em vilas litorâneas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.574444,
+          -25.533333
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-jl-bourbon",
+        "name": "JL Hotel by Bourbon",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Hotel bem avaliado voltado a viagens de negócios e lazer no centro de Foz."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.455,
+          -25.68
+        ]
+      },
+      "properties": {
+        "id": "ar-hotel-gran-melia",
+        "name": "Gran Meliá Iguazú",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "hotel",
+        "description": "Hotel cinco estrelas dentro do Parque Nacional Iguazú, com piscina de borda infinita."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.52,
+          -25.64
+        ]
+      },
+      "properties": {
+        "id": "ar-hotel-loi-suites",
+        "name": "Loi Suites Iguazú",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "hotel",
+        "description": "Hotel imerso na selva subtropical Iryapú, a poucos minutos do centro."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.575,
+          -25.598
+        ]
+      },
+      "properties": {
+        "id": "ar-hotel-panoramic-grand",
+        "name": "Panoramic Grand Hotel",
+        "country": "AR",
+        "city": "Puerto Iguazú",
+        "category": "hotel",
+        "description": "Hotel histórico no centro de Puerto Iguazú, com cassino próprio."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.6052183465,
+          -25.518250302
+        ]
+      },
+      "properties": {
+        "id": "py-hotel-acaray",
+        "name": "Hotel Casino Acaray",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "hotel",
+        "description": "Único hotel cinco estrelas de Ciudad del Este, à beira do rio Paraná."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.611934,
+          -25.512074
+        ]
+      },
+      "properties": {
+        "id": "py-hotel-rio-bourbon",
+        "name": "Rio Hotel by Bourbon Ciudad Del Este",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "hotel",
+        "description": "Hotel bem avaliado próximo à Ponte da Amizade."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.606249,
+          -25.513186
+        ]
+      },
+      "properties": {
+        "id": "py-shopping-paris",
+        "name": "Shopping Paris",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Maior shopping da cidade, a poucos metros da aduana paraguaia, com o Shopping China no 3º andar."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.60562,
+          -25.51045
+        ]
+      },
+      "properties": {
+        "id": "py-shopping-del-este",
+        "name": "Shopping del Este",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Shopping mais recente da cidade, inaugurado em 2024, com área duty free."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.61037,
+          -25.50997
+        ]
+      },
+      "properties": {
+        "id": "py-monalisa",
+        "name": "Monalisa Paraguay",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Loja de perfumaria e produtos de luxo bem avaliada por turistas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.60959,
+          -25.51106
+        ]
+      },
+      "properties": {
+        "id": "py-nissei",
+        "name": "Nissei",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Rede conhecida de eletrônicos e informática na região comercial da cidade."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.60771,
+          -25.51792
+        ]
+      },
+      "properties": {
+        "id": "py-catedral-san-blas",
+        "name": "Catedral San Blas",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "culture",
+        "description": "Principal catedral católica da cidade, construída em 1964 com formato que remete a um barco."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.615,
+          -25.505
+        ]
+      },
+      "properties": {
+        "id": "py-mezquita-del-este",
+        "name": "Mezquita del Este (Al-Khulafa Al-Rashidin)",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "culture",
+        "description": "Principal mesquita da cidade, inaugurada em 2015, com cúpula branca visível de longe."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.62086,
+          -25.51561
+        ]
+      },
+      "properties": {
+        "id": "py-lago-republica",
+        "name": "Lago de la República",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "nature",
+        "description": "Lago artificial e parque urbano cercado de bares, cafés e restaurantes, a cerca de 1 km do centro."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.61,
+          -25.509
+        ]
+      },
+      "properties": {
+        "id": "py-museo-mensu",
+        "name": "Museo El Mensú",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "culture",
+        "description": "Museu de história local dedicado à colonização e formação da região."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.57507,
+          -25.53313
+        ]
+      },
+      "properties": {
+        "id": "br-cataratas-jl-shopping",
+        "name": "Cataratas JL Shopping",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "shopping",
+        "description": "Shopping central com lojas, alimentação, cinema e serviços."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.55835,
+          -25.56894
+        ]
+      },
+      "properties": {
+        "id": "br-catuai-palladium-shopping",
+        "name": "Shopping Catuaí Palladium",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "shopping",
+        "description": "Centro comercial no corredor turístico da Avenida das Cataratas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.5529,
+          -25.5673
+        ]
+      },
+      "properties": {
+        "id": "br-blue-park",
+        "name": "Blue Park",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "entertainment",
+        "description": "Parque aquático de Foz do Iguaçu com atrações de lazer e piscinas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.606344,
+          -25.51354
+        ]
+      },
+      "properties": {
+        "id": "py-shopping-china",
+        "name": "Shopping China Importados",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Grande loja de departamentos e importados na Avenida Luis María Argaña, ao lado do Shopping Paris."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.678875,
+          -25.498358
+        ]
+      },
+      "properties": {
+        "id": "py-jesuitas-plaza",
+        "name": "Jesuitas Plaza",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Centro comercial na região do km 8 de Ciudad del Este, com lojas e gastronomia."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.677867,
+          -25.497683
+        ]
+      },
+      "properties": {
+        "id": "py-hotel-dazzler",
+        "name": "Dazzler by Wyndham Ciudad del Este",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "hotel",
+        "description": "Hotel moderno próximo à Plaza Jesuítica, com piscina na cobertura."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.55553,
+          -25.56756
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-mabu-thermas",
+        "name": "Mabu Thermas Grand Resort",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Resort na Avenida das Cataratas com estrutura de lazer e águas termais."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.558404,
+          -25.566941
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-doubletree",
+        "name": "DoubleTree by Hilton Foz do Iguaçu",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Hotel na Avenida das Cataratas, próximo ao corredor turístico e centros comerciais."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.484722,
+          -25.612778
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-sanma",
+        "name": "Sanma Hotel",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Hotel próximo ao Parque Nacional do Iguaçu e ao Parque das Aves."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.54975,
+          -25.51172
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-recanto-cataratas",
+        "name": "Recanto Cataratas Thermas Resort & Convention",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Resort e centro de convenções na região norte de Foz do Iguaçu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.538611,
+          -25.501111
+        ]
+      },
+      "properties": {
+        "id": "br-hotel-rafain-palace",
+        "name": "Rafain Palace Hotel & Convention",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "hotel",
+        "description": "Hotel e centro de eventos na região da Avenida Olímpio Rafagnin."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.5855179,
+          -25.5471287
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-capitao-bar",
+        "name": "Capitão Bar",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Bar e restaurante tradicional na Avenida Jorge Schimmelpfeng, no centro de Foz."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.576992,
+          -25.5404453
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-la-mafia",
+        "name": "La Mafia Trattoria",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Restaurante italiano temático na região central de Foz do Iguaçu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.610653,
+          -25.510352
+        ]
+      },
+      "properties": {
+        "id": "py-cellshop",
+        "name": "Cellshop",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Loja de departamentos e eletrônicos na Avenida Carlos Antonio López, no Microcentro."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.60873,
+          -25.50998
+        ]
+      },
+      "properties": {
+        "id": "py-mega-eletronicos",
+        "name": "Mega Eletrônicos",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Loja especializada em eletrônicos, celulares e informática no Microcentro."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.60752,
+          -25.50854
+        ]
+      },
+      "properties": {
+        "id": "py-sax-store",
+        "name": "SAX Department Store",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Loja de departamentos com moda, acessórios e produtos importados no centro comercial."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.61041,
+          -25.51035
+        ]
+      },
+      "properties": {
+        "id": "py-shopping-barcelona",
+        "name": "Shopping Barcelona",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Centro comercial localizado no Microcentro de Ciudad del Este."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.61024,
+          -25.51009
+        ]
+      },
+      "properties": {
+        "id": "py-jebai-center",
+        "name": "Galeria Jebai Center",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Galeria comercial tradicional do Microcentro, com diversas lojas especializadas."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.60669,
+          -25.51314
+        ]
+      },
+      "properties": {
+        "id": "py-ishop",
+        "name": "iShop",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Loja de eletrônicos e tecnologia na região da Avenida Luis María Argaña."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.60661,
+          -25.51002
+        ]
+      },
+      "properties": {
+        "id": "py-shopping-box-outlet",
+        "name": "Shopping Box Outlet",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Centro de compras e outlet próximo ao acesso da Ponte da Amizade."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.6056,
+          -25.51052
+        ]
+      },
+      "properties": {
+        "id": "py-casa-nippon",
+        "name": "Casa Nippon",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Loja de departamentos e importados na região do Shopping del Este."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.6061894,
+          -25.5133103
+        ]
+      },
+      "properties": {
+        "id": "py-shopping-hill",
+        "name": "Shopping Hill",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "shopping",
+        "description": "Centro comercial localizado na Avenida Luis María Argaña, no Microcentro."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.61385,
+          -25.510763
+        ]
+      },
+      "properties": {
+        "id": "py-hotel-howard-johnson",
+        "name": "Howard Johnson by Wyndham Ciudad del Este",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "hotel",
+        "description": "Hotel no centro de Ciudad del Este, próximo ao Microcentro comercial."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.61296,
+          -25.51104
+        ]
+      },
+      "properties": {
+        "id": "py-hotel-executive",
+        "name": "Executive Hotel",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "hotel",
+        "description": "Hotel central com acesso rápido à região comercial de Ciudad del Este."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.6103,
+          -25.50993
+        ]
+      },
+      "properties": {
+        "id": "py-restaurant-bistron",
+        "name": "Bistron",
+        "country": "PY",
+        "city": "Ciudad del Este",
+        "category": "gastronomy",
+        "description": "Restaurante no entorno da Monalisa, no Microcentro de Ciudad del Este."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.5821,
+          -25.5401
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-sushi-hokkai",
+        "name": "Sushi Hokkai",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Restaurante japonês tradicional no centro de Foz do Iguaçu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.5820578,
+          -25.5441775
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-bendito",
+        "name": "Bendito",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Restaurante central conhecido por carnes, grelhados e cozinha contemporânea."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.5882,
+          -25.5469
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-bona-trattoria",
+        "name": "Bona Trattoria",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Trattoria de cozinha italiana contemporânea no centro de Foz."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.583889,
+          -25.547222
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-la-toscana",
+        "name": "La Toscana Foz",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Restaurante no centro de Foz, na Rua Marechal Floriano Peixoto."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.58382,
+          -25.5472
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-taj-bar",
+        "name": "Taj Bar",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Bar e restaurante com culinária asiática, japonesa e grelhados no centro de Foz."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.57507,
+          -25.53313
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-all-badawi",
+        "name": "All Badawi",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Restaurante de culinária árabe dentro do Cataratas JL Shopping."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.58056,
+          -25.54107
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-le-mir",
+        "name": "Le Mir Comida Árabe",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Restaurante de culinária libanesa e árabe na região central de Foz do Iguaçu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.557229,
+          -25.502074
+        ]
+      },
+      "properties": {
+        "id": "br-restaurant-rafain-chopp-jeca",
+        "name": "Rafain Chopp by Jeca Espetinho",
+        "country": "BR",
+        "city": "Foz do Iguaçu",
+        "category": "gastronomy",
+        "description": "Bar e restaurante na Vila A com espetinhos, carnes e ambiente de entretenimento."
+      }
+    }
+  ]
+}

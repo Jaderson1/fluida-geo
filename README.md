@@ -1,32 +1,23 @@
-# React + TypeScript + Vite
+# Fluida Geo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Explorer geoespacial da região trinacional (Foz do Iguaçu, Ciudad del Este/Presidente Franco, Puerto Iguazú). React + TypeScript + Vite + MapLibre GL JS, com layout responsivo via `@fluida/core`/`@fluida/react`.
 
-Currently, two official plugins are available:
+## Rodando localmente
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+pnpm install
+pnpm dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+`pnpm build` / `pnpm lint` para build e lint. `node scripts/validate-places.mjs` valida o dataset local.
+
+## Dados
+
+O catálogo de lugares (`src/data/places.geojson`) combina:
+
+- pesquisa manual verificada (nome, funcionamento e localização confirmados por fonte atual) para a maior parte dos registros atuais;
+- descoberta via [OpenStreetMap](https://www.openstreetmap.org/copyright) através da Overpass API, para expansões futuras via `scripts/generate-places.mjs`.
+
+Dados derivados do OpenStreetMap são © colaboradores do OpenStreetMap, licenciados sob a [Open Database License (ODbL) 1.0](https://opendatacommons.org/licenses/odbl/1.0/). O basemap "Mapa" (OpenFreeMap/Liberty) já inclui a atribuição correspondente automaticamente via MapLibre — não remova o `AttributionControl` padrão.
+
+O basemap "Satélite" usa imagens Sentinel-2 cloudless da EOX IT Services GmbH (ver atribuição no próprio mapa).
