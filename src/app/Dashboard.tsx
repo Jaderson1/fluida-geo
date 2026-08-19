@@ -1,21 +1,21 @@
 import { useEffect, useMemo, useState } from 'react';
 import { FluidaText, useFluidaLayout } from '@fluida/react';
-import { LOCAL_ATTRACTIONS } from '../data/attractions';
-import type { AttractionCollection } from '../types/attraction';
-import { DEFAULT_FILTER_STATE, type FilterState, type SelectedAttractionId } from '../types/filters';
+import { LOCAL_PLACES } from '../data/places';
+import type { PlaceCollection } from '../types/place';
+import { DEFAULT_FILTER_STATE, type FilterState, type SelectedPlaceId } from '../types/filters';
 import FilterBar from '../features/filters/FilterBar';
 import MapView from '../features/map/MapView';
-import DetailsPanel from '../features/attractions/DetailsPanel';
+import DetailsPanel from '../features/places/DetailsPanel';
 import MetricsStrip from '../features/metrics/MetricsStrip';
 import { computeStats } from '../features/metrics/computeStats';
 import styles from './Dashboard.module.css';
 
 function Dashboard() {
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTER_STATE);
-  const [selectedId, setSelectedId] = useState<SelectedAttractionId>(null);
+  const [selectedId, setSelectedId] = useState<SelectedPlaceId>(null);
 
   const filteredFeatures = useMemo(() => {
-    return LOCAL_ATTRACTIONS.features.filter((feature) => {
+    return LOCAL_PLACES.features.filter((feature) => {
       const matchesRegion = filters.region === 'ALL' || feature.properties.country === filters.region;
       const matchesCategory =
         filters.category === 'ALL' || feature.properties.category === filters.category;
@@ -23,7 +23,7 @@ function Dashboard() {
     });
   }, [filters]);
 
-  const filteredCollection: AttractionCollection = useMemo(
+  const filteredCollection: PlaceCollection = useMemo(
     () => ({ type: 'FeatureCollection', features: filteredFeatures }),
     [filteredFeatures],
   );
@@ -61,7 +61,7 @@ function Dashboard() {
 
       <main className={`${styles.main} ${isMobile ? styles.mainStacked : ''}`}>
         <MapView data={filteredCollection} selectedId={selectedId} onSelect={setSelectedId} />
-        <DetailsPanel attraction={selectedFeature} />
+        <DetailsPanel place={selectedFeature} />
       </main>
 
       <MetricsStrip stats={stats} />

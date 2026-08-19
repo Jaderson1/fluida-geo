@@ -1,10 +1,8 @@
-import type { AttractionCategory, CountryCode } from './attraction';
+import type { PlaceCategory, CountryCode } from './place';
 
-/** Region filter: a specific country, or all three. */
 export type RegionFilter = CountryCode | 'ALL';
 
-/** Category filter: a single category, or all categories. */
-export type CategoryFilter = AttractionCategory | 'ALL';
+export type CategoryFilter = PlaceCategory | 'ALL';
 
 export interface FilterState {
   region: RegionFilter;
@@ -16,5 +14,4 @@ export const DEFAULT_FILTER_STATE: FilterState = {
   category: 'ALL',
 };
 
-/** id of the selected attraction, or null when nothing is selected. */
-export type SelectedAttractionId = string | null;
+export type SelectedPlaceId = string | null;

@@ -1,12 +1,12 @@
-import type { AttractionStats } from './computeStats';
+import type { PlaceStats } from './computeStats';
 import styles from './MetricsStrip.module.css';
 
 interface MetricsStripProps {
-  stats: AttractionStats;
+  stats: PlaceStats;
 }
 
-const INDICATORS: Array<{ key: keyof AttractionStats; label: string }> = [
-  { key: 'attractions', label: 'Atrações' },
+const INDICATORS: Array<{ key: keyof PlaceStats; label: string }> = [
+  { key: 'places', label: 'Lugares' },
   { key: 'cities', label: 'Cidades' },
   { key: 'countries', label: 'Países' },
   { key: 'categories', label: 'Categorias' },
@@ -17,7 +17,7 @@ const INDICATORS: Array<{ key: keyof AttractionStats; label: string }> = [
 // stretched edge to edge. These four need a fixed compact width instead.
 function MetricsStrip({ stats }: MetricsStripProps) {
   return (
-    <footer className={styles.strip} aria-label="Indicadores do conjunto atual de atrações">
+    <footer className={styles.strip} aria-label="Indicadores do conjunto atual de lugares">
       <div className={styles.grid}>
         {INDICATORS.map(({ key, label }) => (
           <div key={key} className={styles.item}>
