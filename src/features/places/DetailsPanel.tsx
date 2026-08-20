@@ -4,16 +4,21 @@ import styles from './DetailsPanel.module.css';
 
 interface DetailsPanelProps {
   place: PlaceFeature | null;
+  hasFilteredResults: boolean;
 }
 
 // Single panel for every category (attraction, hotel, restaurant, ...) —
 // deliberately not split per category, since properties are already the
 // same shape for all of them.
-function DetailsPanel({ place }: DetailsPanelProps) {
+function DetailsPanel({ place, hasFilteredResults }: DetailsPanelProps) {
   if (!place) {
     return (
       <aside className={styles.panel} aria-label="Detalhes do local">
-        <p className={styles.empty}>Selecione um ponto no mapa para ver detalhes aqui.</p>
+        <p className={styles.empty}>
+          {hasFilteredResults
+            ? 'Selecione um ponto no mapa para ver detalhes aqui.'
+            : 'Nenhum lugar encontrado com esses filtros.'}
+        </p>
       </aside>
     );
   }

@@ -61,7 +61,7 @@ function Dashboard() {
 
       <main className={`${styles.main} ${isMobile ? styles.mainStacked : ''}`}>
         <MapView data={filteredCollection} selectedId={selectedId} onSelect={setSelectedId} />
-        <DetailsPanel place={selectedFeature} />
+        <DetailsPanel place={selectedFeature} hasFilteredResults={filteredFeatures.length > 0} />
       </main>
 
       <MetricsStrip stats={stats} />
