@@ -6,6 +6,8 @@ import { useMapLibre } from './useMapLibre';
 import { INITIAL_ZOOM } from './mapConstants';
 import { REGION_CENTER } from '../../data/places';
 import BasemapToggle from './BasemapToggle';
+import CategoryLegend from './CategoryLegend';
+import ResetViewButton from './ResetViewButton';
 import styles from './MapView.module.css';
 
 interface MapViewProps {
@@ -16,7 +18,7 @@ interface MapViewProps {
 
 function MapView({ data, selectedId, onSelect }: MapViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { mapRef, basemap, setBasemap } = useMapLibre({
+  const { mapRef, basemap, setBasemap, resetView } = useMapLibre({
     containerRef,
     initialCenter: REGION_CENTER,
     initialZoom: INITIAL_ZOOM,
@@ -37,6 +39,8 @@ function MapView({ data, selectedId, onSelect }: MapViewProps) {
 
   return (
     <div ref={containerRef} className={styles.mapContainer} aria-label="Mapa da região trinacional">
+      <CategoryLegend />
+      <ResetViewButton onClick={resetView} />
       <BasemapToggle value={basemap} onChange={setBasemap} />
     </div>
   );

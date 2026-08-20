@@ -273,5 +273,9 @@ export function useMapLibre({
     map.setStyle(next === 'streets' ? STREETS_STYLE_URL : SATELLITE_STYLE);
   };
 
-  return { mapRef, basemap, setBasemap };
+  const resetView = () => {
+    mapRef.current?.easeTo({ center: initialCenter, zoom: initialZoom });
+  };
+
+  return { mapRef, basemap, setBasemap, resetView };
 }
