@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Validates src/data/places.geojson. Run with: node scripts/validate-places.mjs
-// Exits non-zero on any hard failure so it can gate CI later.
+// (or `pnpm validate:places`). Exits non-zero on any hard failure.
 
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -33,8 +33,14 @@ function main() {
 
   for (const feature of features) {
     const p = feature.properties ?? {};
-    const [lon, lat] = feature.geometry?.coordinates ?? [];
     const label = p.id ?? p.name ?? '(sem id)';
+
+    if (feature.type !== 'Feature') {
+      errors.push(`${label}: type não é "Feature"`);
+    }
+    if (feature.geometry?.type !== 'Point') {
+      errors.push(`${label}: geometry.type não é "Point"`);
+    }
 
     if (!p.id || typeof p.id !== 'string') {
       errors.push(`${label}: id ausente ou não-string`);
@@ -60,8 +66,17 @@ function main() {
       errors.push(`${label}: city ausente ou vazia`);
     }
 
+    // Coordinate checks below all depend on a well-formed [lon, lat] pair —
+    // skip them (but keep the property errors already recorded above) if
+    // it's not even that shape.
+    const coords = feature.geometry?.coordinates;
+    if (!Array.isArray(coords) || coords.length !== 2) {
+      errors.push(`${label}: geometry.coordinates não é um par [longitude, latitude]`);
+      continue;
+    }
+    const [lon, lat] = coords;
     if (typeof lon !== 'number' || typeof lat !== 'number' || Number.isNaN(lon) || Number.isNaN(lat)) {
-      errors.push(`${label}: coordenadas ausentes ou não numéricas`);
+      errors.push(`${label}: coordenadas não numéricas`);
       continue;
     }
 
@@ -79,10 +94,8 @@ function main() {
     } else {
       // Same nearest-centroid heuristic generate-places.mjs uses to assign
       // country/city in the first place — flags a declared country/city
-      // that disagrees with where the coordinate actually sits, which is
-      // exactly the "BR point physically in Ciudad del Este" case this
-      // check exists for. A heuristic, not a boundary authority: it's a
-      // warning, not a hard failure.
+      // that disagrees with where the coordinate actually sits. Heuristic,
+      // not a boundary authority (see report): warning, not a failure.
       const located = locateCityCountry(lon, lat);
       if (located && (located.country !== p.country || located.city !== p.city)) {
         warnings.push(
@@ -98,6 +111,8 @@ function main() {
     coordKey.get(key).push(label);
   }
 
+  // Same-complex places (e.g. Museu de Cera + Vale dos Dinossauros) sharing
+  // a coordinate is expected — a warning to double-check, never an error.
   for (const [key, ids] of coordKey) {
     if (ids.length > 1) {
       warnings.push(`coordenada repetida (${key}) em: ${ids.join(', ')} — confirmar que não é duplicata`);

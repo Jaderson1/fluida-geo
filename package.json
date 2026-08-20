@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:places": "node scripts/validate-places.mjs"
   },
   "dependencies": {
     "@fluida/core": "^0.2.3",
