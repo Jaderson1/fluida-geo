@@ -54,3 +54,31 @@
     grid-template-rows: minmax(320px, 55vh) auto;
   }
 }
+
+.statusScreen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.retryButton {
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--ink-800);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.retryButton:hover {
+  border-color: var(--tide);
+}
